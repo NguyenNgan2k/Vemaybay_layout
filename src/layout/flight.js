@@ -1,4 +1,6 @@
 import { BsFillAirplaneFill, BsClock } from "react-icons/bs";
+import Airplane from "../assets/img/icon_flight_white.png";
+import IgVnAir from "../assets/img/VN.gif";
 function Flight() {
   return (
     <div className="mx-auto max-w-screen-lg pt-6">
@@ -263,9 +265,90 @@ function Flight() {
             </div>
           </div>
 
-          {/*Tìm kiếm chuyến bay */}
+          {/*Tìm kiếm chuyến bay formSearchTicket*/}
         </div>
-        <div className="col-span-2"></div>
+        <div className="col-span-2 my-2">
+          {/*list thời gian*/}
+          <div className="border rounded-t">
+            <div className="p-3 flex items-center bg-[#f7941d] rounded-t">
+              <div className="border-b border-b-white">
+                <img src={Airplane} className="p-2" />
+              </div>
+              <div className="text-white">
+                <p className="font-bold">
+                  Hà Nội, Việt Nam (HAN) Hồ Chí Minh, Việt Nam (SGN)
+                </p>
+                <p>Thứ 6, 30-06-2023</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-7">
+              <div className="text-center py-2 border-r">
+                <p className="text-xs">27-06-2023</p>
+                <p className="text-[#ffa300]">Thứ 7</p>
+                <p className="text-xs">1,218,000</p>
+              </div>
+              <div className="text-center py-2 border-r">
+                <p className="text-xs">27-06-2023</p>
+                <p className="text-[#ffa300]">CN</p>
+                <p className="text-xs">1,218,000</p>
+              </div>
+              <div className="text-center py-2 border-r">
+                <p className="text-xs">27-06-2023</p>
+                <p className="text-[#ffa300]">Thứ 2</p>
+                <p className="text-xs">1,218,000</p>
+              </div>
+              <div className="text-center py-2 border-r">
+                <p className="text-xs">27-06-2023</p>
+                <p className="text-[#ffa300]">Thứ 3</p>
+                <p className="text-xs">1,218,000</p>
+              </div>
+              <div className="text-center py-2 border-r">
+                <p className="text-xs">27-06-2023</p>
+                <p className="text-[#ffa300]">Thứ 4</p>
+                <p className="text-xs">1,218,000</p>
+              </div>
+              <div className="text-center py-2 border-r">
+                <p className="text-xs">27-06-2023</p>
+                <p className="text-[#ffa300]">Thứ 5</p>
+                <p className="text-xs">1,218,000</p>
+              </div>
+              <div className="text-center py-2">
+                <p className="text-xs">27-06-2023</p>
+                <p className="text-[#ffa300]">Thứ 6</p>
+                <p className="text-xs">1,218,000</p>
+              </div>
+            </div>
+          </div>
+          {/*list chuyến bay*/}
+          <div className="my-3 p-2 border rounded flex items-center h-24">
+            <div className="p-2 w-32 border-r border-dashed h-full">
+              <img src={IgVnAir} className="w-16 h-6 mx-auto mb-2" />
+              <p className="text-xs">Vietnam Airlines </p>
+            </div>
+            <div className="flex text-center w-72 justify-between border-r border-dashed h-full">
+              <div className="p-2">
+                <p>Hà Nội</p>
+                <p className="text-2xl">21:00</p>
+              </div>
+              <div className="p-2">
+                <p className="text-[#ffa300]">VJ161</p>
+                <a className="text-[#ecbb2e] text-xs">Chi tiết</a>
+              </div>
+              <div className="p-2">
+                <p>Hồ Chí Minh</p>
+                <p className="text-2xl">23:15</p>
+              </div>
+            </div>
+            <div className="p-2 w-[calc(100%-416px)]">
+              <p className="text-2xl w-full text-center">
+                1,222,000 <span className="text-base text-[#777]">VND</span>
+              </p>
+              <button className="text-white bg-[#63adb3] hover:bg-[#00264e] p-2 rounded  w-full">
+                CHỌN CHUYẾN BAY
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
