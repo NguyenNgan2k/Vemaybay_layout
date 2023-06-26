@@ -1,27 +1,27 @@
-import React, { forwardRef, useEffect, useState } from 'react';
-import DatePicker from 'react-datepicker';
-import { range } from 'lodash';
-import * as _ from 'lodash';
-import { stringToDate } from '../utils';
-import moment from 'moment';
-import { connect } from 'react-redux';
+import React, { forwardRef, useEffect, useState } from "react";
+import DatePicker from "react-datepicker";
+import { range } from "lodash";
+import * as _ from "lodash";
+import { stringToDate } from "../utils";
+import moment from "moment";
+import { connect } from "react-redux";
 
 const monthVns = [
-  'Tháng 1',
-  'Tháng 2',
-  'Tháng 3',
-  'Tháng 4',
-  'Tháng 5',
-  'Tháng 6',
-  'Tháng 7',
-  'Tháng 8',
-  'Tháng 9',
-  'Tháng 10',
-  'Tháng 11',
-  'Tháng 12',
+  "Tháng 1",
+  "Tháng 2",
+  "Tháng 3",
+  "Tháng 4",
+  "Tháng 5",
+  "Tháng 6",
+  "Tháng 7",
+  "Tháng 8",
+  "Tháng 9",
+  "Tháng 10",
+  "Tháng 11",
+  "Tháng 12",
 ];
 
-const dayVns = ['Cn', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
+const dayVns = ["Cn", "T2", "T3", "T4", "T5", "T6", "T7"];
 
 function usePrevious(value) {
   const ref = React.useRef();
@@ -53,10 +53,10 @@ function RenderInputDate(props) {
   const locale = {
     localize: {
       day: (n) => dayVns[n],
-      month: (n) => monthVns[n]
+      month: (n) => monthVns[n],
     },
     formatLong: {
-      date: () => 'mm/dd/yyyy',
+      date: () => "mm/dd/yyyy",
     },
   };
 
@@ -68,14 +68,33 @@ function RenderInputDate(props) {
       vnf_regex.test(input?.value) &&
       !_.isEqual(input?.value, preInputValue)
     ) {
-      setStartDate(stringToDate(input?.value, 'dmy'));
-      input.onChange(input?.value)
+      setStartDate(stringToDate(input?.value, "dmy"));
+      input.onChange(input?.value);
     }
   }, [input?.value]);
 
   const ExampleCustomInput = forwardRef(({ onClick }, ref) => (
-    <div className={disabled ? "border-b border-[#f7941d] w-56 text-[#837a76]" : "border-b border-[#f7941d] w-56"} onClick={!disabled ?  onClick : () =>{}}>
-      <div>{input?.value}</div>
+    <div
+      className="border-b border-[#f7941d] w-60 cursor-pointer  flex justify-between items-center"
+      onClick={!disabled ? onClick : () => {}}
+    >
+      <div className={disabled ? "text-[#837a76]" : ""}>{input?.value}</div>
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="3"
+          stroke="currentColor"
+          className="w-4 h-4 text-[#837A76]"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+      </div>
     </div>
   ));
 
@@ -94,9 +113,7 @@ function RenderInputDate(props) {
           minDate={minDate}
           maxDate={maxDate}
           locale={locale}
-          onChange={(date) =>
-            input.onChange(moment(date).format('DD/MM/YYYY'))
-          }
+          onChange={(date) => input.onChange(moment(date).format("DD/MM/YYYY"))}
           customInput={<ExampleCustomInput />}
           onCalendarOpen={handleCalendarOpen}
           onCalendarClose={handleCalendarClose}
@@ -109,13 +126,12 @@ function RenderInputDate(props) {
             increaseMonth,
             prevMonthButtonDisabled,
             nextMonthButtonDisabled,
-
           }) => (
             <div
               style={{
                 margin: 10,
-                display: 'flex',
-                justifyContent: 'center',
+                display: "flex",
+                justifyContent: "center",
               }}
             >
               <button
@@ -123,7 +139,7 @@ function RenderInputDate(props) {
                 disabled={prevMonthButtonDisabled}
                 className="btn px-2 py-0"
               >
-                {'<'}
+                {"<"}
               </button>
               <select
                 value={date.getFullYear()}
@@ -154,7 +170,7 @@ function RenderInputDate(props) {
                 disabled={nextMonthButtonDisabled}
                 className="btn px-2 py-0"
               >
-                {'>'}
+                {">"}
               </button>
             </div>
           )}
