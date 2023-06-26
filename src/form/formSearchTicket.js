@@ -56,7 +56,7 @@ function FormSearchTicket(props) {
               <span className="text-[#FFA300]">Vé máy bay</span>
             </div>
 
-            <div className="flex mb-4">
+            <div className="block lg:flex mb-4">
               <div className="flex mr-auto">
                 <div className="py-2 pr-5 flex">
                   <Field name="formOneWay" component={RenderCheck} id={1} />
@@ -77,32 +77,32 @@ function FormSearchTicket(props) {
               </div>
             </div>
 
-            <div className="flex w-full">
-              <div className="w-2/3 mr-10">
-                <div className="flex justify-between mb-4">
-                  <div className="w-60">
+            <div className="block lg:flex w-full">
+              <div className="w-full lg:w-2/3 mr-10">
+                <div className="block lg:flex justify-between mb-4">
+                  <div className="w-full lg:w-60">
                     <label className="text-[#837a76] font-medium">
                       Điểm đi
                     </label>
                     <Field name="formPointGo" component={ChooseAddress} />
                   </div>
                   <img src={Convert} className="h-2 self-end mb-2" />
-                  <div className="w-60">
+                  <div className="w-full lg:w-60">
                     <label className="text-[#837a76] font-medium">
                       Điểm đến
                     </label>
                     <Field name="formPointReturn" component={ChooseAddress} />
                   </div>
                 </div>
-                <div className="flex justify-between mb-2">
-                  <div className="w-60">
+                <div className="block lg:flex justify-between mb-2">
+                  <div className="w-full lg:w-60">
                     <label className="text-[#837a76] font-medium">
                       Ngày đi
                     </label>
                     <Field name="formDateGo" component={RenderDate} />
                   </div>
                   <img src={Convert} className="h-2 self-end mb-2" />
-                  <div className="w-60">
+                  <div className="w-full lg:w-60">
                     <label className="text-[#837a76] font-medium">
                       Ngày về
                     </label>
@@ -114,7 +114,7 @@ function FormSearchTicket(props) {
                   </div>
                 </div>
               </div>
-              <div className="w-1/3 grid grid-cols-3 gap-4">
+              <div className="w-full lg:w-1/3 grid grid-cols-3 gap-4">
                 <div>
                   <div className="text-center">Người lớn</div>
                   <div className="flex justify-between items-center border p-2 rounded">

@@ -1,6 +1,7 @@
 import { BsFillAirplaneFill, BsClock } from "react-icons/bs";
 import Airplane from "../assets/img/icon_flight_white.png";
 import IgVnAir from "../assets/img/VN.gif";
+import FormSearchTicket from "../form/formSearchTicket";
 function Flight() {
   return (
     <div className="mx-auto max-w-screen-lg pt-6">

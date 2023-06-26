@@ -49,7 +49,7 @@ function ChooseAddress(props) {
     <div className="relative" {...input}>
       <div
         className={
-          "border-b border-[#f7941d] w-60 cursor-pointer flex justify-between items-center"
+          "border-b border-[#f7941d] w-full lg:w-60cursor-pointer flex justify-between items-center"
         }
         onClick={() => setOpen(!open)}
       >

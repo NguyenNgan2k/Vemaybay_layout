@@ -75,7 +75,7 @@ function RenderInputDate(props) {
 
   const ExampleCustomInput = forwardRef(({ onClick }, ref) => (
     <div
-      className="border-b border-[#f7941d] w-60 cursor-pointer  flex justify-between items-center"
+      className="border-b border-[#f7941d] w-full lg:w-60 cursor-pointer  flex justify-between items-center"
       onClick={!disabled ? onClick : () => {}}
     >
       <div className={disabled ? "text-[#837a76]" : ""}>{input?.value}</div>
@@ -174,6 +174,7 @@ function RenderInputDate(props) {
               </button>
             </div>
           )}
+          className="w-full"
         />
       </div>
     </>
