@@ -320,12 +320,12 @@ function Flight() {
             </div>
           </div>
           {/*list chuyến bay*/}
-          <div className="my-3 p-2 border rounded flex items-center h-24">
-            <div className="p-2 w-32 border-r border-dashed h-full">
+          <div className="my-3 p-2 border rounded flex items-center h-24 border-zinc-500">
+            <div className="p-2 w-32 border-r border-dashed h-full border-zinc-500">
               <img src={IgVnAir} className="w-16 h-6 mx-auto mb-2" />
               <p className="text-xs">Vietnam Airlines </p>
             </div>
-            <div className="flex text-center w-72 justify-between border-r border-dashed h-full">
+            <div className="flex text-center w-72 justify-between border-r border-dashed h-full border-zinc-500">
               <div className="p-2">
                 <p>Hà Nội</p>
                 <p className="text-2xl">21:00</p>
